@@ -128,7 +128,7 @@ function copyText(text) {
 searchInput.addEventListener("input", () => {
     const filter = searchInput.value.toLowerCase();
     Array.from(tableBody.children).forEach((row) => {
-        const filename = row.children[3].textContent.toLowerCase();
+        const filename = row.children[1].textContent.toLowerCase();
         row.style.display = filename.includes(filter) ? "" : "none";
     });
 });

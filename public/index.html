@@ -21,10 +21,8 @@
 <!-- Hauptinhalt -->
 <main class="container">
   <!-- Such- und Ordnerbereich -->
-  <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
-    <div class="w-100">
-      <input id="searchInput" type="text" class="form-control" placeholder="🔍 Nach Dateiname suchen...">
-    </div>
+  <div class="mb-4 search-input">
+    <input id="searchInput" type="text" class="form-control" placeholder="🔍 Nach Dateiname suchen...">
   </div>
 
   <!-- Tabelle für Dateien -->
@@ -45,23 +43,32 @@
 <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-scrollable">
     <div class="modal-content bg-secondary text-light">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalTitle"></h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Schließen"></button>
-      </div>
       <div class="modal-body">
-        <!-- Aktionen -->
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <button id="doneButton" class="btn btn-success">Erledigt</button>
+        <div class="d-flex gap-3">
+          <img id="modalImg" class="nft-img" alt="NFT-Bild">
+
+          <div>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <!-- Title -->
+              <h5 class="modal-title" id="modalTitle"></h5>
+
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Schließen"></button>
+            </div>
+
+            <!-- Detailinformationen -->
+            <p id="modalDesc"></p>
+
+
+            <!-- Attribute -->
+            <h4>Attribute</h4>
+            <ul id="attrList" class="list-group"></ul>
+
+            <!-- Aktionen -->
+            <div class="d-flex justify-content-end align-items-center mt-3">
+              <button id="doneButton" class="btn btn-success">Erledigt</button>
+            </div>
+          </div>
         </div>
-
-        <!-- Detailinformationen -->
-        <p id="modalDesc" class="text-muted"></p>
-        <img id="modalImg" class="img-fluid mb-3 mx-auto d-block border border-light" alt="NFT-Bild">
-
-        <!-- Attribute -->
-        <h4>Attribute</h4>
-        <ul id="attrList" class="list-group"></ul>
       </div>
     </div>
   </div>

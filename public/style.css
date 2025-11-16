@@ -7,3 +7,12 @@
 .copy-icon:hover {
     color: white;
 }
+
+.nft-img {
+    max-width: 100%;
+    max-height: 10rem;
+}
+
+.search-input {
+    max-width: 20rem;
+}
