@@ -118,3 +118,29 @@ projekt/
 
 ## **Zusammenfassung**
 Die NFT Metadata Generator-App vereinfacht den Prozess der Metadatenerstellung für NFTs. Ob du ein kleines Projekt oder eine große NFT-Sammlung verwalten möchtest – diese App hilft dir, deine Metadaten effizient zu generieren, zu bearbeiten und zu organisieren.
+
+
+## browser
+document.getElementById('addTraitBtn').click();
+setTimeout(()=> {
+   document.querySelector('input[name="traitType"]').value = "test";
+   document.querySelector('input[name="value"]').value = "testing";
+
+   document.querySelector('button[type="submit"]').removeAttribute('disabled');
+   document.querySelector('button[type="submit"]').classList.remove('pointer-events-none');
+   setTimeout(()=> {
+      document.querySelector('button[type="submit"]').click();
+      document.querySelector('input[name="traitType"]').click();
+      document.querySelector('input[name="value"]').click();
+
+      setTimeout(()=> {
+         document.querySelector('button[type="submit"]').click();
+         document.querySelector('input[name="traitType"]').click();
+         document.querySelector('input[name="value"]').click();
+         
+         setTimeout(()=> {
+            document.querySelector('button[type="submit"]').click();
+         }, 200);
+      }, 200);
+   }, 200);
+}, 200);

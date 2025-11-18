@@ -12,7 +12,8 @@ async function loadMetadata() {
         tableBody.innerHTML = ""; // Lösche bestehende Tabelle
 
         // Lade und zeige alle Dateien
-        for (const filename of files) {
+        for (let i= 0; i < files.length; i++) {
+            const filename = files[i];
             const row = document.createElement("tr");
             row.className = "text-center";
 
@@ -23,6 +24,7 @@ async function loadMetadata() {
 
             if (fileData) {
                 row.innerHTML = `
+                    <td>#${i}</td>
                     <td><img src="/images/${filename.replace(".json", ".png")}" alt="Bild" width="80"></td>
                     <td>${fileData.name || "-"}</td>
                 `;
